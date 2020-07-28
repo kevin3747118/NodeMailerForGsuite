@@ -27,7 +27,7 @@ class ALZKMailer {
             await this.transporter.verify();
             await this.transporter.sendMail({
                 from: mailInfo.sendFrom,
-                to: mailInfo.sendTo, // `kevin3747118@outlook.com, kevinprowill@gmail.com`,
+                to: mailInfo.sendTo, // `abc@outlook.com, def@gmail.com`,
                 subject: mailInfo.sendSubject,
                 text: mailInfo.sendText
             })
@@ -41,7 +41,7 @@ var mailer2 = new ALZKMailer();
 
 mailer2.send({ 
     sendFrom: 'enkore.smart@alzk.com.tw', 
-    sendTo: 'kevin@alzk.com.tw', 
+    sendTo: 'abc@alzk.com.tw', 
     sendSubject: "Lock Dead",
     sendText: "L1 is dead"
 }).then(() => {
@@ -55,7 +55,7 @@ mailer2.send({
 
 // hello.send({
 //     sendFrom: 'enkore.smart@alzk.com.tw',
-//     sendTo: 'kevinprowill@gmail.com',
+//     sendTo: 'abc@gmail.com',
 //     sendSubject: "N@@@@@"
 // }).then(() => {
 //     console.log('ok...')
